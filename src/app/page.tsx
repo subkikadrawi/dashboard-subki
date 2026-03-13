@@ -1,8 +1,14 @@
+import About from "@/components/profile/About";
+import Contact from "@/components/profile/Contact";
+import Work from "@/components/profile/Work";
+
 export default function Home() {
   return (
-    <div className="container mx-auto p-6">
+    <div className="w-5/6 mx-auto p-4">
       <h1 className="text-3xl font-bold">Template Next.js Starter</h1>
-      <p className="mt-2">Secure starter with Next.js, Tailwind, Prisma and JWT auth (HttpOnly cookies)</p>
+      <About />
+      <Work />
+      <Contact />
     </div>
   )
 }
