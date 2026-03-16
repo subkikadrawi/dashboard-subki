@@ -23,7 +23,7 @@ export default function Navbar() {
           <Link href="/">About</Link>
           <Link href="/">Work</Link>
           <Link href="/">Contact</Link>
-          <Button type="primary" onClick={() => showSuccess('Download CV clicked')}>Download CV</Button>
+          <Button type="primary" onClick={() => showSuccess('Next To Do!')}>Download CV</Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -67,7 +67,7 @@ export default function Navbar() {
                 <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600">About</Link>
                 <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600">Work</Link>
                 <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600">Contact</Link>
-                <Button onClick={() => showSuccess('Download CV clicked')}>Download CV</Button>
+                <Button onClick={() => showSuccess('Next To Do!')}>Download CV</Button>
               </div>
             </div>
           </div>
