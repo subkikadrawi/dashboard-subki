@@ -6,23 +6,17 @@ import { showSuccess } from './Alert'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  // const [user, setUser] = useState<string | null>(null)
-  // useEffect(() => {
-  //   fetch('/api/user', { credentials: 'include' })
-  //     .then(r => r.json())
-  //     .then(d => setUser(d.user?.username || null))
-  // }, [])
 
   return (
-    <nav className="bg-white shadow p-4">
+    <nav className="sticky top-0 z-50 bg-white shadow p-4">
       <div className="w-5/6 mx-auto flex justify-between items-center">
         <div className="font-bold">MyApp</div>
         
         {/* Desktop Menu - hidden on mobile */}
         <div className="hidden md:flex space-x-4 items-center">
-          <Link href="/">About</Link>
-          <Link href="/">Work</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/#about">About</Link>
+          <Link href="/#work">Work</Link>
+          <Link href="/#contact">Contact</Link>
           <Button type="primary" onClick={() => showSuccess('Next To Do!')}>Download CV</Button>
         </div>
 
@@ -64,9 +58,9 @@ export default function Navbar() {
               </div>
               
               <div className="flex flex-col space-y-4">
-                <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600">About</Link>
-                <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600">Work</Link>
-                <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600">Contact</Link>
+                <Link href="/#about" onClick={() => {setIsMenuOpen(false)}} className="hover:text-blue-600">About</Link>
+                <Link href="/#work" onClick={() => {setIsMenuOpen(false)}} className="hover:text-blue-600">Work</Link>
+                <Link href="/#contact" onClick={() => {setIsMenuOpen(false)}} className="hover:text-blue-600">Contact</Link>
                 <Button onClick={() => showSuccess('Next To Do!')}>Download CV</Button>
               </div>
             </div>
