@@ -47,5 +47,3 @@ coverage/
 
 # Others
 *.tgz
-
-package-lock.json
